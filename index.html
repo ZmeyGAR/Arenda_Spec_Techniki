@@ -576,23 +576,21 @@
 
                     result = await postFormData('/mail.php', new FormData(forms[i]));
                     if (result.success) {
-                        if (this.closest('#swal2-html-container')) {
-                            Swal.fire({
-                                icon: 'success',
-                                html: `
+                        Swal.fire({
+                            icon: 'success',
+                            html: `
                                 <div class="message">
                                     <h4 class="message__title">Ваше сообщение было отправлено</h4>
                                     <p>Мы свяжемся с Вами в ближайшее время!</p>
                                 <div>
                                 `,
-                                showConfirmButton: true,
-                                customClass: {
-                                    confirmButton: 'btn btn--boom-boom btn--message'
-                                },
-                                buttonsStyling: false
-                            })
-                        }
-                        document.querySelectorAll('.section.form-callback').forEach(item => item.remove())
+                            showConfirmButton: true,
+                            customClass: {
+                                confirmButton: 'btn btn--boom-boom btn--message'
+                            },
+                            buttonsStyling: false
+                        })
+                        this.reset();
                     } else {
                         Swal.fire({
                             icon: 'error',
