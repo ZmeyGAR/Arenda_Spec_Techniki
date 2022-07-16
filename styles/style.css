@@ -762,6 +762,20 @@ h4 {
   -webkit-box-shadow: 0 0 5px 0 #F3A714, 0 0 10px 5px #F3A714;
           box-shadow: 0 0 5px 0 #F3A714, 0 0 10px 5px #F3A714; }
 
+.btn--message {
+  position: relative;
+  background: -o-linear-gradient(45deg, white, #F3A714 30%, white 50%, #F3A714 80%, white);
+  background: linear-gradient(45deg, white, #F3A714 30%, white 50%, #F3A714 80%, white);
+  font-weight: bold;
+  background-size: 400% 400%;
+  color: #1E2022;
+  -webkit-animation: gradient 5s infinite;
+          animation: gradient 5s infinite;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  padding: 1em 2em;
+  border-radius: 4px; }
+
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -892,6 +906,35 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  color: #E7EAF3;
+  text-align: center; }
+  .message__title {
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: 700;
+    margin-bottom: 0.5em; }
+  .message p {
+    font-size: 1.7em;
+    line-height: 1em;
+    opacity: 0.9; }
+  .message pre {
+    color: #192351;
+    font-weight: bold;
+    display: block;
+    margin: 1em 0;
+    background: #E7EAF3;
+    border-radius: 4px;
+    padding: 1em; }
 
 @-webkit-keyframes gradient {
   0% {
