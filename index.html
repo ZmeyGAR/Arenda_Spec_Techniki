@@ -151,7 +151,7 @@
             <!-- </a> -->
         </div>
         <hr class="product__separator">
-        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
     </div>
 </div><div class="swiper-slide">
     <div class="product">
@@ -162,7 +162,7 @@
             <!-- </a> -->
         </div>
         <hr class="product__separator">
-        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
     </div>
 </div><div class="swiper-slide">
     <div class="product">
@@ -173,7 +173,7 @@
             <!-- </a> -->
         </div>
         <hr class="product__separator">
-        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
     </div>
 </div><div class="swiper-slide">
     <div class="product">
@@ -184,7 +184,7 @@
             <!-- </a> -->
         </div>
         <hr class="product__separator">
-        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
     </div>
 </div><div class="swiper-slide">
     <div class="product">
@@ -195,7 +195,7 @@
             <!-- </a> -->
         </div>
         <hr class="product__separator">
-        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
     </div>
 </div><div class="swiper-slide">
     <div class="product">
@@ -206,7 +206,7 @@
             <!-- </a> -->
         </div>
         <hr class="product__separator">
-        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
     </div>
 </div><div class="swiper-slide">
     <div class="product">
@@ -217,7 +217,7 @@
             <!-- </a> -->
         </div>
         <hr class="product__separator">
-        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
     </div>
 </div><div class="swiper-slide">
     <div class="product">
@@ -228,7 +228,7 @@
             <!-- </a> -->
         </div>
         <hr class="product__separator">
-        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
     </div>
 </div><div class="swiper-slide">
     <div class="product">
@@ -239,7 +239,7 @@
             <!-- </a> -->
         </div>
         <hr class="product__separator">
-        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+        <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
     </div>
 </div>
 
@@ -627,7 +627,8 @@
         }
     }
 
-    async function getClientInfo() {
+    function getClientInfo() {
+
         const telPattern = '\+?[0-9]\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\s?\d{2}[-]{0,1}\s?\d{2}';
         Swal.fire({
             html: `
