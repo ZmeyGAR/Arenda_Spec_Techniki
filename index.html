@@ -18,12 +18,14 @@
 
 <!-- STYLESHEET -->
 
+<link rel="stylesheet" href="./styles/sweetalert.borderless.theme.min.css" type="text/css">
 <link rel="stylesheet" href="./styles/lightGalery.min.css" type="text/css">
 <link rel="stylesheet" href="./styles/AOS.min.css" type="text/css">
 <link rel="stylesheet" href="./styles/swiper-bundle.min.css" type="text/css">
-<link rel="stylesheet" href="./styles/style.css?v3" type="text/css">
+<link rel="stylesheet" href="./styles/style.css?v4" type="text/css">
 
 <!-- SCRIPTS -->
+<script src="./scripts/sweetalert2.all.min.js" defer></script>
 <script src="./scripts/lightGalery.min.js" defer></script>
 <script src="./scripts/parallax.tilt.min.js" defer></script>
 <script src="./scripts/swiper-bundle.min.js" defer></script>
@@ -104,14 +106,31 @@
                 <br>
                 Цена услуг аренды подлежит обсуждению индивидуально.
             </p>
-            <form action="" class="form">
-                <input type="text" name="name" id="input-name" placeholder="Ваше имя" data-tilt-scale="1.1">
-                <input type="text" name="phone" id="input-phone" placeholder="Ваш телефон" data-tilt-scale="1.1">
-                <button type="button" class="btn btn--boom-boom" data-tilt data-tilt-glare data-tilt-max-glare="0.7"
-                    data-tilt-full-page-listening data-tilt-reverse="true">
-                    <span>Заказать звонок</span>
-                </button>
-            </form>
+            <div class="form__wrapper">
+                <div class="form__head">
+                    <a href="/" class="logo">
+                        <svg>
+                            <use xlink:href="icons/sprite.svg#Logo"></use>
+                        </svg>
+                    </a>
+
+                    <div class="form__title">
+                        Укажите свои контакты для связи
+                    </div>
+                </div>
+                <form action="" class="form">
+                    <input type="text" name="name" id="input-name" placeholder="Ваше имя" data-tilt-scale="1.1"
+                        minlength="3" required>
+                    <input type="tel" name="tel" id="input-phone" placeholder="Ваш телефон"
+                        pattern="\+?[0-9]\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\s?\d{2}[-]{0,1}\s?\d{2}" required
+                        minlength="11" maxlength="18" data-tilt-scale="1.1">
+                    <button type="submit" class="btn btn--boom-boom" data-tilt data-tilt-glare data-tilt-max-glare="0.7"
+                        data-tilt-full-page-listening data-tilt-reverse="true">
+                        <span>Заказать звонок</span>
+                    </button>
+                </form>
+            </div>
+
         </div>
     </div>
 
@@ -316,7 +335,7 @@
         <!-- </a> -->
     </div>
     <hr class="product__separator">
-    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
 </div><div class="product" data-aos="fade-up" data-aos-anchor-placement="bottom bottom">
     <div class="product__name">ГАЗ - 3302 (с тентом)</div>
     <div class="product__img">
@@ -325,7 +344,7 @@
         <!-- </a> -->
     </div>
     <hr class="product__separator">
-    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
 </div><div class="product" data-aos="fade-up" data-aos-anchor-placement="bottom bottom">
     <div class="product__name">КАМАЗ 53212 (грузовой-бортовой) с краном-манипулятором</div>
     <div class="product__img">
@@ -334,7 +353,7 @@
         <!-- </a> -->
     </div>
     <hr class="product__separator">
-    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
 </div><div class="product" data-aos="fade-up" data-aos-anchor-placement="bottom bottom">
     <div class="product__name">КАМАЗ - 54115 15 с прицепом (грузовой тягач седельный)</div>
     <div class="product__img">
@@ -343,7 +362,7 @@
         <!-- </a> -->
     </div>
     <hr class="product__separator">
-    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
 </div><div class="product" data-aos="fade-up" data-aos-anchor-placement="bottom bottom">
     <div class="product__name">TEREX TLB 825-RM Экскаватор-погрузчик</div>
     <div class="product__img">
@@ -352,7 +371,7 @@
         <!-- </a> -->
     </div>
     <hr class="product__separator">
-    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
 </div><div class="product" data-aos="fade-up" data-aos-anchor-placement="bottom bottom">
     <div class="product__name">МАЗ 6516А8-321 грузовой самосвал</div>
     <div class="product__img">
@@ -361,7 +380,7 @@
         <!-- </a> -->
     </div>
     <hr class="product__separator">
-    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
 </div><div class="product" data-aos="fade-up" data-aos-anchor-placement="bottom bottom">
     <div class="product__name">КАМАЗ 55111 грузовой самосвал</div>
     <div class="product__img">
@@ -370,7 +389,7 @@
         <!-- </a> -->
     </div>
     <hr class="product__separator">
-    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
 </div><div class="product" data-aos="fade-up" data-aos-anchor-placement="bottom bottom">
     <div class="product__name">KRONE SOP 27 Полуприцеп с бортовой платформой. 14 метров</div>
     <div class="product__img">
@@ -379,7 +398,7 @@
         <!-- </a> -->
     </div>
     <hr class="product__separator">
-    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
 </div><div class="product" data-aos="fade-up" data-aos-anchor-placement="bottom bottom">
     <div class="product__name">КАМАЗ65 201-63 Грузовой самосвал</div>
     <div class="product__img">
@@ -388,7 +407,7 @@
         <!-- </a> -->
     </div>
     <hr class="product__separator">
-    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р"></button>
+    <button class="product__price btn btn--boom-boom" data-price="от 2 000 р" onclick="getClientInfo()"></button>
 </div>
         </div>
     </div>
@@ -425,14 +444,10 @@
         </div>
     </article>
     <div class="post-fluid__container">
-        <form action="" class="form">
-            <input type="text" name="name" id="input-name" placeholder="Ваше имя" data-tilt-scale="1.1">
-            <input type="text" name="phone" id="input-phone" placeholder="Ваш телефон" data-tilt-scale="1.1">
-            <button type="button" class="btn btn--boom-boom" data-tilt data-tilt-glare data-tilt-max-glare="0.7"
-                data-tilt-full-page-listening data-tilt-reverse="true">
-                <span>Заказать звонок</span>
-            </button>
-        </form>
+        <script>
+            let form = document.querySelector('.form').cloneNode(true);
+            document.querySelector('.post-fluid__container').appendChild(form)
+        </script>
     </div>
 </section>
 
@@ -530,6 +545,104 @@
 
     </div>
 </footer>
+
+
+
+<script>
+
+    function enableForm() {
+        const forms = [...document.querySelectorAll('.form')];
+
+        for (let i = 0; i < forms.length; i++) {
+            const inputName = forms[i].querySelector('input[type="text"][name="name"]');
+            const inputTel = forms[i].querySelector('input[type="tel"][name="tel"]');
+            inputTel.setCustomValidity(`Укажите свой телефон в формате +X XXX XXX XX XX или X XXX XXX XX XX`);
+            inputTel.addEventListener('input', function () {
+                this.setCustomValidity('');
+                this.checkValidity();
+            })
+            inputTel.addEventListener('invalid', function () {
+                this.setCustomValidity(`
+                Пожалуйста, укажите номер телефона!
+                Возможно, здесь какая то ошибка!
+                Например: +7 978 182 77 87 или 7 978 182 77 87
+                Напишите номер телефона в числовом формате без пунктуации и пробелов`)
+            })
+
+            forms[i].addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                if (inputTel.validity && inputName.validity) {
+
+                    result = await postFormData('/mail.php', new FormData(forms[i]));
+                    console.log('result: ', result);
+
+                    if (result.success) {
+                        iziToast.success({
+                            title: 'Спасибо!',
+                            overlay: true,
+                            position: 'topRight',
+                            message: 'Ваше сообщение было отправлено!'
+                        });
+                        document.querySelectorAll('.section.form-callback').forEach(item => item.remove())
+                    } else {
+                        console.error('Ошибка отправки данных!')
+                    }
+                }
+            })
+        }
+    }
+
+    async function postFormData(url, data) {
+        let response = await fetch(url, {
+            method: 'POST',
+            body: data
+        });
+        return await response.json();
+    }
+
+    async function getClientInfo() {
+        const telPattern = '\+?[0-9]\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\s?\d{2}[-]{0,1}\s?\d{2}';
+        Swal.fire({
+            html: `
+                <div class="form__wrapper">
+                    <div class="form__head">
+                        <a href="/" class="logo">
+                            <svg>
+                                <use xlink:href="icons/sprite.svg#Logo"></use>
+                            </svg>
+                        </a>
+
+                        <div class="form__title">
+                            Укажите свои контакты для связи
+                        </div>
+                    </div>
+                    <form action="" class="form">
+                        <input type="text" name="name" id="input-name" placeholder="Ваше имя" data-tilt-scale="1.1" required minlength="3">
+                        <input type="tel" 
+                                name="tel" 
+                                id="input-phone" 
+                                placeholder="Ваш телефон" 
+                                pattern="${telPattern}" 
+                                required 
+                                minlength="11" 
+                                maxlength="18"
+                                data-tilt-scale="1.1">
+                        <button type="submit" class="btn btn--boom-boom" data-tilt data-tilt-glare data-tilt-max-glare="0.7"
+                            data-tilt-full-page-listening data-tilt-reverse="true">
+                            <span>Заказать звонок</span>
+                        </button>
+                    </form>
+                </div>
+            `,
+            didOpen: toast => enableForm(),
+            showConfirmButton: false,
+        }).then(result => console.log(result))
+    }
+
+    document.addEventListener('DOMContentLoaded', enableForm)
+
+</script>
 
     </div>
 

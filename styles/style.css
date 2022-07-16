@@ -812,6 +812,25 @@ h4 {
   max-width: -moz-max-content;
   max-width: max-content;
   margin-top: 1em; }
+  .form__head {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .form__title {
+    font-size: 32px;
+    line-height: 1em;
+    color: #E7EAF3;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1em; }
   .form > * {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -868,6 +887,11 @@ h4 {
       z-index: 1;
       -webkit-transform: translateZ(20px);
               transform: translateZ(20px); }
+
+#swal2-html-container .form__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 @-webkit-keyframes gradient {
   0% {
